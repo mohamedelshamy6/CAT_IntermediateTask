@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "331532940274",
+    "project_id": "catzon-51386",
+    "storage_bucket": "catzon-51386.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331532940274:android:4aa7d658c8c9bd7d60b16b",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331532940274-mdti3mm0vrfeldjnnunvu5g02lskonp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3HBc-xaVA0yCWA3C50R9ZGw84-EU8C2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331532940274-mdti3mm0vrfeldjnnunvu5g02lskonp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
