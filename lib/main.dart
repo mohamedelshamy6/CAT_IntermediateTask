@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
                   }
                 },
               ),
-            builder: (context, child) => const BotNavBar(),
+            builder: (context, child) => const LoadingScreen(),
           ),
         ],
       ),

@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cartModel = context.read<CartViewModel>();
+    final cartModel = context.watch<CartViewModel>();
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -38,10 +38,6 @@ class HomeScreen extends StatelessWidget {
                 '${cartModel.count}',
               ),
             ),
-
-          ),
-          Text(
-            '${cartModel.totalPrice}',
           ),
         ],
         backgroundColor: const Color(0xff2D46B9),
@@ -78,14 +74,14 @@ class MyBody extends StatelessWidget {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => MultiProvider(providers: [
-                  Provider<SingleProductViewModel>(
-                      create: (_) =>
-                          SingleProductViewModel(singleProduct: product)),
-                  Provider<CartViewModel>(
-                      builder: (context, child) => const SingleProductScreen(),
-                      create: (_) => CartViewModel()),
-                ]),
+                builder: (context) => Provider<SingleProductViewModel>(
+                  builder: (context, child) => Provider<CartViewModel>(
+                    builder: (context, child) => const SingleProductScreen(),
+                    create: (context) => CartViewModel(),
+                  ),
+                  create: (context) =>
+                      SingleProductViewModel(singleProduct: product),
+                ),
               ),
             ),
             child: Container(

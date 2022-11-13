@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/ui/screens/app_body/home_screen.dart';
+import 'package:untitled/ui/screens/app_body/bot_nav_bar.dart';
 import 'package:untitled/ui/screens/login_signup/signup.dart';
 import '../../widgets/button.dart';
 import '../../widgets/text_form_field.dart';
@@ -84,7 +84,7 @@ class _LoginState extends State<Login> {
                         ),
                         const SizedBox(height: 15),
                         Button(
-                            destination: const HomeScreen(),
+                            destination: const BotNavBar(),
                             title: 'Login',
                             formKey: formKey,
                             emailc: emailC,

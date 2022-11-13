@@ -80,7 +80,7 @@ class Basket extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      '1020',
+                      '0',
                       style: TextStyle(fontSize: 18),
                     ),
                   ],
